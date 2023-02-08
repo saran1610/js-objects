@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="email" id="mail">
+        <input type="password" id="pass">
+        <button id="btn">Login</button>
+    </div>
+    <script>
+let userdata=[
+    {
+        name:"saranya",
+        email:"saranya@gmail.com",
+        password:"12345",
+    },
+    {
+        name:"arya",
+        email:"arya@gmail.com",
+        password :"123456",
+    }
+];
+let details =document.getElementById("mail");
+let passdetail = document.getElementById("pass");
+let btndetail = document.getElementById("btn");
+
+btn.addEventListener('click',login);
+
+function login(){
+    console.log(details.value +" "+ passdetail.value);
+
+let finduser = userdata.find(function(ele){
+    return ele.email == details.value;
+})
+
+console.log(finduser);
+if(finduser){
+
+    if(finduser.password === passdetail.value.trim()){
+      console.log("welcomme back "+ finduser.name)
+    }else{
+        console.log("invalid password")
+    }
+}else{
+    console.log("invalid  email")
+}
+}
+
+
+    </script>
+</body>
+</html>

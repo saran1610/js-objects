@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="email" id="email">
+        <input type="password" id="pass"><br>
+        <button id="btn">Login</button>
+    </form><br><br>
+
+    <form action="" id="signup_form">
+    <input type="text" placeholder="First Name" id="firstname" class="inputs">
+    <input type="text" placeholder="Last Name" id="lastname"  class="inputs"><br><br>
+    
+    <input type="radio" id="male" name="gender" id="male" value="male" >
+    <label for="male">Male</label>
+    <input type="radio" id="Female" name="gender" id="female" value="female" >
+    <label for="Female">Female</label><br><br>
+    <input type="email" placeholder="Enter Your Mail" id="mail"  class="inputs"><br><br>
+    
+    <input type="tel" placeholder="Enter your phone number" id="num"  class="inputs">
+    <input type="password" placeholder="Create Password" id="newpd"  class="inputs">
+    <input type="password" placeholder="confirm Password" id="cnfrmpd"  class="inputs"><br><br><br><br>
+    <button type="submit" id="button">Sign Up</button>
+    </form>
+    
+   
+</body>
+<script>
+    let userdata=[];
+    const form = document.getElementById("signup_form")
+    const fname = document.getElementById("firstname");
+    const lname = document.getElementById("lastname");
+    const gender = document.getElementsByName("gender");
+    const mail = document.getElementById("mail");
+    const newpd = document.getElementById("newpd");
+    const cnfrmpd = document.getElementById("cnfrmpd");
+    const number = document.getElementById("num");
+    const button = document.getElementById("button");
+    // const errorelement= document.getElementById("error")
+    var formisvalid = false
+ let input = document.getElementsByClassName("inputs")
+form.addEventListener('submit',(e) =>{
+e.preventDefault()
+   
+    if(fname.value.trim()!=='' && lname.value.trim()!=='' &&  mail.value.trim()!=='' && newpd.value.trim()!==''
+    && cnfrmpd.value.trim() !=='' && number.value.trim()!==''){
+        // input[i].style.outline="none";
+        formisvalid =true;
+        console.log( formisvalid);
+        error();
+    }
+    else{
+        // input[i].style.outline="red solid 1px";
+        formisvalid =false;
+        console.log( formisvalid)
+          error();
+    }
+ 
+   
+   let gendervalue;
+if(formisvalid){
+    
+    let count=0;
+    for(let i=0;i<gender.length;i++){
+    if(gender[i].checked==true){
+       count=1;
+        if(count>0){
+            formisvalid =true;
+            gendervalue= gender[i].value;
+        }
+        console.log( formisvalid)
+    }else{
+        if(count==0){
+        formisvalid =false;
+        console.log( formisvalid)
+    }
+    }
+   
+    }
+   
+}
+  if(formisvalid){
+    let obj={};
+   obj.username = fname.value + lname.value;
+   obj.gender = gendervalue;
+   obj.email= mail.value;
+   obj.password = cnfrmpd.value;
+   obj.phonenumber = number.value;
+   obj.userid= Math.random();
+   userdata.push(obj);
+   console.log(userdata)
+  }  
+    
+})
+function error(){
+        for( let i=0;i<input.length;i++){
+        if(input[i].value.trim()==''){
+            input[i].style.outline="red solid 1px";
+        }else{
+            input[i].style.outline="none";
+        }
+        }
+    }
+
+</script>
+</html>

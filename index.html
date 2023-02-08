@@ -5,172 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css.map"> -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
+<header>
     
-   <script>
-    let obj1={
-        product:"toaster",
-        brand:"iBELL",
-        color:"black",
-        price:3000,
-        specification:["weight","wattage","dimension","material"],
-        img:"./image/sandwich.webp",
-    };
-    let obj2={
-        product:"induction-cooktop",
-        brand:"Philips",
-        color:"black",
-        price:3000,
-        specification:[""],
-        img:"./image/induction.webp",
-    };
-    let obj3={
-        product:"Fryer",
-        brand:"Philips",
-        color:"silver",
-        price:7500,
-        specification:[""],
-        img:"./image/fryer.webp",
-    };
-    let obj4={
-        product:"Kettle",
-        brand:"Pigeon",
-        color:"black with silver",
-        price:600,
-        specification:[""],
-        img:"./image/kettle.webp",
-    };
-    let obj5={
-        product:"Sandwich maker",
-        brand:"Prestige",
-        color:"silver",
-        price:1300,
-        specification:[""],
-        img:"./image/sandwich-maker.webp",
-    };
-    let obj6={
-        product:"hair dyer",
-        brand:"Philips",
-        color:"violet",
-        price:830,
-        specification:["voltage","material","source"],
-        img:"./image/hair-dryer.webp",
-    };
-    let obj7={
-        product:"ironbox",
-        brand:"Philips",
-        color:"blue",
-        price:1600,
-        specification:["voltage","material","temperature"],
-        img:"./image/ironbox.webp",
-    };
-    let obj8={
-        product:"water purifier",
-        brand:"Libra",
-        color:"Black",
-        price:1600,
-        specification:["voltage","material",""],
-        img:"./image/purifier.webp",
-    };
-    let obj9={
-        product:"chopper",
-        brand:"Borosil",
-        color:"black",
-        price:1900,
-        specification:["material","voltage","blade shape"],
-        img:"./image/chopper.webp",
-    };
-    let obj10={
-        product:"Vacuum cleaner",
-        brand:"Insala",
-        color:"red",
-        price:2500,
-        specification:["material","voltage","filter-type"],
-        img:"./image/vacuumcleaner.jpg",
-    };
-    let obj11={
-        product:"soup maker",
-        brand:"wonderchef",
-        color:"white",
-        price:7500,
-        specification:["material","voltage","blade-shape"],
-        img:"./image/soupmaker.webp",
-    };
-    let obj12={
-        product:"hand blender",
-        brand:"orpat",
-        color:"white",
-        price:900,
-        specification:["material","voltage","charger"],
-        img:"./image/handblender.webp",
-    };
-    let obj13={
-        product:"Straighter brush",
-        brand:"philips",
-        color:"black",
-        price:2800,
-        specification:["material","voltage"],
-        img:"./image/straighter.webp",
-    };
-    let obj14={
-        product:"hand mixing blender",
-        brand:"Philips",
-        color:"black",
-        price:2100,
-        specification:["voltage","material"],
-        img:"./image/blender.webp",
-    };
-    let obj15={
-        product:"vegetable chopper",
-        brand:"pigeon",
-        color:"green",
-        price:300,
-        specification:["material","blades"],
-        img:"./image/minichopper.webp"
-    };
-    let obj16={
-        product:"electric multi cooker",
-        brand:"glen",
-        color:"grey",
-        price:1600,
-        specification:["material","voltage"],
-        img:"./image/multicooker.jpg",
-    };
-    let obj17={
-        product:"Ladder",
-        brand:"plantex",
-        color:"blue",
-        price:3500,
-        specification:["material"],
-        img:"./image/ladder.jpg",
-    };
-    let obj18={
-        product:"Toaster and oven",
-        brand:"Lifelong",
-        color:"black",
-        price:2200,
-        specification:["voltage","material"],
-        img:"./image/toaster.jpg",
-    };
-    let obj19={
-        product:"Rice cooker",
-        brand:"Devay",
-        color:"blue",
-        price:700,
-        specification:["voltage","material"],
-        img:"./image/cooker.jpg",
-    };
-    let obj20={
-        product:"Kettle Steamer",
-        brand:"Agaro",
-        color:"green",
-        price:1700,
-        specification:["voltage","material"],
-        img:"./image/kettlesteamer.jpg",
-    };
+    <nav class="nav-sec">
+        <h2 class="header"><a href="#">Big Basket</a></h2> 
+      <div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>View Cart
+        </button>
 
-   </script>
+
+
+      </div>
+    </nav>
+</header>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart Items</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="cart-item">
+         <!-- <div class="cart1">
+            <div class="img-pic">
+                <img src="./image/blender.webp" alt="image">
+            </div>
+            <div>
+                
+                <p>Hand blender- Philips</p> 
+
+                <div class="price">
+                    <div class="productprce" id="pd1">2100</div>   
+                    <div class="prcechange">2100</div> 
+                </div>
+            
+                <div class="valuebtn">
+                    <button class="minus">-</button>
+                    <input type="number" class="ipqty" value="1">
+                    <button class="plus">+</span></button>
+                </div>
+
+            </div>
+           
+            <i class="fa fa-trash " aria-hidden="true"></i>
+         </div> -->
+<!-- <hr> -->
+<!-- <div class="cart1">
+    <div class="img-pic">
+        <img src="./image/sandwich.webp" alt="image">
+    </div>
+    <div>
+        
+        <p>Toaster -Ibell</p> 
+
+        <div class="price">
+            <div class="productprce" id="pd1">3000</div>   
+            <div class="prcechange">3000</div> 
+        </div>
+    
+        <div class="valuebtn">
+            <button class="minus">-</button>
+            <input type="number" class="ipqty" value="1">
+            <button class="plus">+</span></button>
+        </div>
+
+    </div>
+   
+    <i class="fa fa-trash " aria-hidden="true"></i>
+ </div> -->
+         <!-- <hr> -->
+
+        </div>
+      </div>
+    <section class="sec1">
+        <div class="container">
+            <div class="row" id="sec1-row">
+                
+            </div>
+            
+
+        </div>
+    </section>
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script> -->
+    <!-- <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js.map"></script> -->
+   <script src="./js/script.js"> </script>
 
 </body>
 </html>
